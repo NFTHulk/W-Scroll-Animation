@@ -1,11 +1,31 @@
-const scrollimage = new ScrollPlay({
-  speed: 10,
-  container: "img_container",
-  canvas: "img_canvas",
-  sequence:
-    "https://static.pkmo.dev/RedLeaf_Aerial_Mockup-Preferred_210f_JPEG/Comp 3_210f_alternative_00",
-  frames: 210
-});
+if(window.screen.width>=300&&window.screen.width<=719){
+  const scrollimage = new ScrollPlay({
+    speed: 50,
+    container: "img_container",
+    canvas: "img_canvas",
+    sequence:
+        "Mobile/",
+    frames: 28
+  });
+}else if(window.screen.width>=720&&window.screen.width<=960){
+  const scrollimage = new ScrollPlay({
+    speed: 50,
+    container: "img_container",
+    canvas: "img_canvas",
+    sequence:
+        "Tab/",
+    frames: 28
+  });
+}else{
+  const scrollimage = new ScrollPlay({
+    speed: 50,
+    container: "img_container",
+    canvas: "img_canvas",
+    sequence:
+        "Desktop/",
+    frames: 28
+  });
+}
 
 const scrollvideo = new ScrollPlay({
   speed: 300,
